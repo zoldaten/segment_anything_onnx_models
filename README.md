@@ -12,7 +12,7 @@ parser.add_argument(
 python scripts/export_onnx_model.py --checkpoint sam_vit_b_01ec64.pth --model-type vit_b --output vit_b.onnx
 
 3.use to extract multiple masks
-
+```
 import cv2,time
 from segment_anything import sam_model_registry, SamPredictor,SamAutomaticMaskGenerator, sam_model_registry
 from segment_anything.utils.onnx import SamOnnxModel
@@ -38,3 +38,4 @@ masks = mask_generator.generate(img)
 print(len(masks))
 
 print("--- %s seconds ---" % (time.time() - start_time))
+```
