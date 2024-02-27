@@ -2,15 +2,16 @@
 onnx_models for segment_anything
 
 1. change in segment-anything\scripts\export_onnx_model.py
-
+```
 parser.add_argument(
    "--return-single-mask",
     default=False,
     #action="store_true",
-
+```
 2. convert pth model to onnx (b model for example)
+```
 python scripts/export_onnx_model.py --checkpoint sam_vit_b_01ec64.pth --model-type vit_b --output vit_b.onnx
-
+```
 3.use to extract multiple masks
 ```
 import cv2,time
